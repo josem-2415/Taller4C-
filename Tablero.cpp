@@ -8,15 +8,28 @@ using namespace std;
 const int Tablero::salidaX = Tablero::filas - 1;
 const int Tablero::salidaY = Tablero::columnas - 1;
 
-Tablero::Tablero(){
-    srand((unsigned)time(0));
+Tablero::Tablero(){                    //Inicializa cada objeto como una matriz de 0 y 1 ubicados en posiciones aleatorias
+    srand(time(0));                    //crea números aleatorios usando como semilla 0
     for(int i=0;i<filas;i++){
-        for(int j=0; j<columnas;j++){
-            tablero[i][j]=(rand()%2);// 0 o 1
+        for(int j=0; j<columnas;j++){  //Bucle anidado para rellenar la matriz tablero
+            int numero = rand() % 100; // 0 a 99
+            if (numero < 15) {         // 15% de probabilidad
+                tablero[i][j] = 1;
+            } else {
+                tablero[i][j] = 0;
+            } //muetra un 0 o un 1 en cada espacio de la matriz
         }
     }
-    // Asegurar que la salida sea transitable
-    tablero[salidaX][salidaY] = 1;
+    for (int i = 0; i < filas; i++) { //Crea un camino posible en zigzag
+        if (i % 2 == 0) { // fila par
+            for (int j = 0; j < columnas; j++)
+            tablero[i][j] = 1;
+        }
+        else { // fila impar
+            tablero[i][columnas - 1] = 1;
+        }
+    }
+
 }
 
 void Tablero::mostrarTablero(int ax, int ay)const{
@@ -27,7 +40,7 @@ void Tablero::mostrarTablero(int ax, int ay)const{
             } else if (i==salidaY && j==salidaX) {
                 std::cout << 'X'; // salida
             } else {
-                std::cout << (tablero[j][i] == 1 ? '.' : '#');
+                std::cout << (tablero[j][i] == 1 ? '1' : '0');
             }
             std::cout << "\t";
         }
@@ -45,3 +58,4 @@ void Tablero::getRandomCeldaValida(int &outX, int &outY) const {
         outY = rand() % columnas;
     } while(!celdaValida(outX, outY));
 }
+
