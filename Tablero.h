@@ -26,9 +26,6 @@ class Tablero {
         static const int filas = 10;
         static const int columnas = 10;
         int tablero[filas][columnas];
-        
-        // Método privado para generar el laberinto con camino garantizado
-        void generarCaminoHaciaLaSalida(int startX, int startY);
 
     public:
         static const int salidaX;
