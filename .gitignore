@@ -1,4 +1,64 @@
-main
-main.exe
-test_runner
-test_runner.exe
+# =========================================
+
+# ARCHIVO: .gitignore
+
+# PROYECTO: Laberinto POO - C++
+
+# =========================================
+
+# Archivos de compilación
+
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.a
+*.out
+
+# Archivos de respaldo o temporales
+
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Archivos de configuración del sistema o IDEs
+
+.vscode/
+.idea/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.user
+*.opensdf
+*.sdf
+*.db
+
+# Carpetas temporales o de build
+
+build/
+Debug/
+Release/
+x64/
+bin/
+obj/
+
+# Archivos de sistema de Windows y Mac
+
+Thumbs.db
+.DS_Store
+
+# Repositorio local de Git (no se debe ignorar)
+
+# .git/
+
+# Archivos generados por el sistema
+
+*.stackdump
+
+# =========================================
+
+# Fin del archivo
+
+# =========================================
