@@ -24,8 +24,8 @@ Colaboradores:
 
 class Avatar {
     private:
-        int x;
-        int y;
+        int *x = nullptr;
+        int *y = nullptr;
     public:
         //Constructor para inicializar la posicion del avatar
         Avatar(int xinicial = 0, int yinicial = 0);
