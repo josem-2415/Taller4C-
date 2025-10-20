@@ -1,10 +1,7 @@
-#include "Tablero.h"
-#include "Avatar.h"
-#include <iostream>
+#include "Game.h"
 
 int main(){
-    Tablero laberinto;
-    Avatar soldado(laberinto);
-    laberinto.mostrarTablero();
+    Game juego;
+    juego.run();
     return 0;
 }
