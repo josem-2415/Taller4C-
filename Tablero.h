@@ -1,5 +1,8 @@
 #ifndef TABLERO_H
+#ifndef TABLERO_H
 #define TABLERO_H
+#include <vector>
+
 /*
 ===============================================================================
                                 CRC -REGISTROPRESTACION
@@ -19,17 +22,23 @@ Colaboradores:
 ===============================================================================
 */
 
-class Tablero{
+class Tablero {
     private:
-    static const int filas=10;
-    static const int columnas=10;
-    int tablero [filas][columnas];
+        static const int filas = 10;
+        static const int columnas = 10;
+        int tablero[filas][columnas];
 
     public:
-    Tablero();
+        static const int salidaX;
+        static const int salidaY;
 
-    void mostrarTablero()const;
-    bool celdaValida(int x, int y)const;
-
+        // Constructor por defecto que genera un laberinto con camino garantizado
+        Tablero();
+        
+        // Métodos públicos
+        void mostrarTablero(int ax = -1, int ay = -1) const;
+        bool celdaValida(int x, int y) const;
+        void getRandomCeldaValida(int &outX, int &outY) const;
 };
+
 #endif //TABLERO_H
