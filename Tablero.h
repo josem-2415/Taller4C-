@@ -1,23 +1,24 @@
 #ifndef TABLERO_H
-#ifndef TABLERO_H
 #define TABLERO_H
 #include <vector>
 
 /*
 ===============================================================================
-                                CRC -REGISTROPRESTACION
+                                CRC - TABLERO
 ===============================================================================
 
 Clase:
-    RegistroPrestacion
+    Tablero
 
 Responsabilidades:
-    - Registra el prestamo que se la hace a un usuario univalluno
-    -Validar que el prestamo ya esta en el vector  y si este esta en Finalizado o en prestamo 
-    
+    - Representar el laberinto como una matriz de celdas.
+    - Generar un camino aleatorio garantizado hacia la salida.
+    - Validar si una celda es transitable o no.
+    - Mostrar el laberinto en consola.
 
 Colaboradores:
-    - 
+    - Avatar (usa el Tablero para validar movimientos).
+    - Game (coordina la interacción con el Tablero).
 
 ===============================================================================
 */
