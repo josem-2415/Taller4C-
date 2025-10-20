@@ -126,7 +126,7 @@ g++ -o Laberinto main.cpp Game.cpp Avatar.cpp Tablero.cpp
 
 ---
 
-## 👨‍💻 Autores
+## Autores
 
 **Nombres:** Jose Cardona, Nerie Vasquez, Sebastian Valencia, Andres Rodriguez
 **Curso:** Fundamentos de Programación Orientada a Objetos
