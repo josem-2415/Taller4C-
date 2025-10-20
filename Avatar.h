@@ -2,6 +2,26 @@
 #define AVATAR_H
 #include "Tablero.h"
 
+/*
+===============================================================================
+                                CRC - AVATAR
+===============================================================================
+
+Clase:
+    Avatar
+
+Responsabilidades:
+    - Representar al jugador dentro del laberinto.
+    - Almacenar y actualizar su posición (x, y).
+    - Controlar los movimientos del avatar (arriba, abajo, izquierda, derecha).
+    - Validar los movimientos con respecto al Tablero.
+
+Colaboradores:
+    - Tablero (usa una referencia constante para validar movimientos).
+
+===============================================================================
+*/
+
 class Avatar {
     private:
         int x;
