@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Avatar.h"
 
-Avatar::Avatar(int xinicial, int yinicial) : x(&xinicial), y(&yinicial) {}
+Avatar::Avatar(int *xinicial, int *yinicial) : x(xinicial), y(yinicial) {}
 
 //Getters para obtener la posicion actual del avatar
-int Avatar::getX() const { return *x; }
-int Avatar::getY() const { return *y; }
+int Avatar::getX() const { return (x != nullptr) ? *x : 0; }
+int Avatar::getY() const { return (y != nullptr) ? *y : 0; }
 
 //Metodos para mover el avatar (validan con Tablero)
 bool Avatar::moverArriba(const Tablero& t) {

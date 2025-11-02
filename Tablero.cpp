@@ -47,7 +47,7 @@ void Tablero::mostrarTablero(int ax, int ay)const{
        std::cout<<std::endl;
     }
 }
-bool Tablero::celdaValida(int x, int y)const{
+bool Tablero::celdaValida(const int& x, const int& y)const{
     return (x >= 0 && x < filas && y >= 0 && y < columnas && tablero[x][y] == 1);
 }
 

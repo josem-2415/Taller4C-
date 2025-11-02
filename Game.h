@@ -27,6 +27,7 @@ class Game {
     private:
         Tablero tablero;
         Avatar avatar;
+        int sx, sy; // Posición del avatar
     public:
         Game();
         void run();
