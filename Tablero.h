@@ -38,7 +38,7 @@ class Tablero {
         
         // Métodos públicos
         void mostrarTablero(int ax = -1, int ay = -1) const;
-        bool celdaValida(int x, int y) const;
+        bool celdaValida(const int& x, const int& y) const;
         void getRandomCeldaValida(int &outX, int &outY) const;
 };
 

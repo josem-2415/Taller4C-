@@ -5,10 +5,8 @@
 
 using namespace std;
 
-Game::Game() : tablero(), avatar(0,0) {
-    int sx, sy;
+Game::Game() : tablero(), sx(0), sy(0), avatar(&sx, &sy) {
     tablero.getRandomCeldaValida(sx, sy);
-    avatar = Avatar(sx, sy);
 }
 
 void Game::run() {

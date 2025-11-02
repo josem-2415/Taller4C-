@@ -28,7 +28,7 @@ class Avatar {
         int *y = nullptr;
     public:
         //Constructor para inicializar la posicion del avatar
-        Avatar(int xinicial = 0, int yinicial = 0);
+        Avatar(int* xinicial = nullptr, int* yinicial = nullptr);
 
         //Getters para obtener la posicion actual del avatar
         int getX() const;
